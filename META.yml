@@ -1,0 +1,21 @@
+--- #YAML:1.0
+name:                Shell-GetEnv
+version:             0.02
+abstract:            extract the environment from a shell after executing commands
+license:             gpl
+generated_by:        ExtUtils::MakeMaker version 6.36
+distribution_type:   module
+requires:     
+    Data::Dumper:                  0
+    Env::Path:                     0
+    Expect:                        0
+    File::Spec:                    0
+    File::Temp:                    0
+    IO::File:                      0
+    Test::More:                    0
+    YAML::Tiny:                    0
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Diab Jerius <dj@>
