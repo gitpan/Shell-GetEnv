@@ -30,6 +30,7 @@ t/pod.t
 t/redirect.t
 t/testenv.bash
 t/testenv.csh
+t/testenv.dash
 t/testenv.ksh
 t/testenv.sh
 t/testenv.tcsh
