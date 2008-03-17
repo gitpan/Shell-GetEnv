@@ -21,6 +21,7 @@ META.yml
 README
 t/00-load.t
 t/00Shell-GetEnv.t
+t/diffsonly.t
 t/envstr.t
 t/exclude.t
 t/import_envs.t

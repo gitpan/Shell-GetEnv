@@ -29,7 +29,7 @@ use Carp;
 use File::Temp;
 use Shell::GetEnv::Dumper;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 
 # a compendium of shells
@@ -233,11 +233,16 @@ sub _shell_options
 
     my $shell = $shells{$self->{Shell}};
 
+    ## no critic (ProhibitAccessOfPrivateData)
+
     my @options = 
       map { $shell->{$_} }
 	grep { exists $shell->{$_} && $self->{$_} }
 	  qw( NoStartup Echo Verbose Interactive )
 	    ;
+
+    ## use critic
+
 
     # bundled options are those without a leading hyphen or plus
     my %options = map { ( $_ => 1 ) } @options;
@@ -356,7 +361,7 @@ sub envs
     if ( $opt{DiffsOnly} )
     {
 	my @delkeys =
-	  grep { exists $ENV{$_} && $env{$_} ne $ENV{$_} } keys %env;
+	  grep { exists $ENV{$_} && $env{$_} eq $ENV{$_} } keys %env;
 
 	delete @env{@delkeys};
     }
