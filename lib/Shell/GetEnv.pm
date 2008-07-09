@@ -21,6 +21,7 @@
 
 package Shell::GetEnv;
 
+require 5.008000;
 use strict;
 use warnings;
 
@@ -29,7 +30,7 @@ use Carp;
 use File::Temp;
 use Shell::GetEnv::Dumper;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 
 # a compendium of shells
