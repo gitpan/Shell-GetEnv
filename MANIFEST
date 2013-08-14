@@ -2,6 +2,7 @@ ChangeLog
 Changes
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
+inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
 inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
@@ -19,8 +20,6 @@ Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
-MYMETA.json
-MYMETA.yml
 README
 t/00-load.t
 t/00Shell-GetEnv.t
@@ -35,6 +34,8 @@ t/testenv.dash
 t/testenv.ksh
 t/testenv.sh
 t/testenv.tcsh
+t/testenv.zsh
+xt/changes.t
 xt/perlcritic.t
 xt/pod-coverage.t
 xt/pod.t

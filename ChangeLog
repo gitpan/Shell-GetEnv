@@ -1,8 +1,81 @@
-2008-07-09  Diab Jerius  <djerius@cfa.harvard.edu>
+2013-08-14 09:48 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (685fcb9c6f0d [tip])
 
-	Tag 0.08
+	* .hgtags:
+	Added tag 0.08_02 for changeset dfc76e826cfb
 
-2008-07-09 08:50 -0400  djerius  <djerius@cfa.harvard.edu>  (1cb91108c4e3 [tip])
+2013-08-14 09:48 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (dfc76e826cfb [0.08_02])
+
+	* Changes, lib/Shell/GetEnv.pm:
+	update logs and version for release
+
+2013-08-13 18:19 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (108dc110bd2a)
+
+	* MANIFEST.SKIP:
+	don't distribute MYMETA* files
+
+2013-08-13 18:18 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (e9f26190896b)
+
+	* ChangeLog: deleted file.
+	* ChangeLog:
+	don't track ChangeLog as it is a derived product
+
+2013-08-13 18:12 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (406b79cd4728)
+
+	* xt/changes.t: new file.
+	* Makefile.PL, xt/changes.t:
+	add tests for proper Changes format
+
+2013-08-13 17:42 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (22359359d733)
+
+	* t/testenv.zsh: new file.
+	* lib/Shell/GetEnv.pm, t/00Shell-GetEnv.t, t/testenv.zsh:
+	add support for zsh
+
+2013-08-13 17:21 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (490185fe6682)
+
+	* t/diffsonly.t:
+	the "_" variable seems to not always be there on Cygwin; ignore it
+	in tests (rt.cpan.org #87110)
+
+2013-08-13 17:14 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (08dbe8fa563b)
+
+	* lib/Shell/GetEnv.pm, t/00Shell-GetEnv.t:
+	escape non-word characters in variable _name_ as well as value.
+
+	It's legal (in some environments) for environment variable names to
+	include non-word characters. Allow that and test for it.
+	(rt.cpan.org #87110: Marty O'Brien <mob@cpan.org>)
+
+2013-08-13 16:46 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (03a0b72a5010)
+
+	* t/00Shell-GetEnv.t:
+	elide excess newline
+
+2013-08-13 16:21 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (839c0bdbfeb4)
+
+	* t/diffsonly.t:
+	ignore RANDOM environment variable between test runs, as it changes
+	RANDOMly
+
+2012-08-14 15:36 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (14b778aa392a)
+
+	* xt/perlcritic.t, xt/pod-coverage.t, xt/pod.t: new file.
+	* t/perlcritic.t, t/pod-coverage.t, t/pod.t: deleted file.
+	* Makefile.PL, t/perlcritic.t, t/pod-coverage.t, t/pod.t,
+	xt/perlcritic.t, xt/pod-coverage.t, xt/pod.t:
+	make pod & perlcritic tests author only
+
+2008-07-09 08:52 -0400  djerius  <djerius@cfa.harvard.edu>  (e4cc9eaef66e)
+
+	* .hgtags:
+	Added tag 0.08 for changeset 7b6dd741724a
+
+2008-07-09 08:52 -0400  djerius  <djerius@cfa.harvard.edu>  (7b6dd741724a [0.08])
+
+	* ChangeLog, Changes, lib/Shell/GetEnv.pm, lib/Shell/GetEnv/Dumper.pm:
+	update logs and version for release
+
+2008-07-09 08:50 -0400  djerius  <djerius@cfa.harvard.edu>  (1cb91108c4e3)
 
 	* lib/Shell/GetEnv.pm:
 	explicitly require a Perl version that supports three-valued open to

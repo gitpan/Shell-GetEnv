@@ -30,7 +30,7 @@ use Carp;
 use File::Temp;
 use Shell::GetEnv::Dumper;
 
-our $VERSION = '0.08_01';
+our $VERSION = '0.08_02';
 
 
 # a compendium of shells
@@ -38,6 +38,13 @@ my %shells = (
 	      bash => {
 		       Interactive     => 'i',
 		       NoStartup => '--noprofile',
+		       Verbose   => 'v',
+		       Echo      => 'x',
+		      },
+
+	      zsh => {
+		       Interactive     => 'i',
+		       NoStartup => 'p',
 		       Verbose   => 'v',
 		       Echo      => 'x',
 		      },
@@ -371,7 +378,7 @@ sub envs
 
     if ( $opt{EnvStr} )
     {
-	my @set = map { "$_=" . _shell_escape($env{$_}) } keys %env;
+	my @set = map { _shell_escape("$_=" . $env{$_}) } keys %env;
 	my @unset;
 
 	if ( $opt{ZapDeleted} )
